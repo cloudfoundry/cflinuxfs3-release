@@ -1,0 +1,13 @@
+---
+name: cflinuxfs3-rootfs-setup
+
+templates:
+  pre-start: bin/pre-start
+  trusted_ca.crt.erb: config/certs/trusted_ca.crt
+
+packages:
+  - cflinuxfs3
+
+properties:
+  cflinuxfs3-rootfs.trusted_certs:
+    description: "certficates to add to the rootfs trust store"
