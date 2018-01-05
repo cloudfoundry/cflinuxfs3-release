@@ -1,0 +1,4 @@
+---
+name: cflinuxfs3
+files:
+- rootfs/cflinuxfs3-*.tar.gz

@@ -1,0 +1,4 @@
+set -e -x
+
+echo "Copying rootfs"
+cp rootfs/cflinuxfs3-*.tar.gz ${BOSH_INSTALL_TARGET}/cflinuxfs3.tar.gz
