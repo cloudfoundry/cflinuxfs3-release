@@ -11,6 +11,8 @@ instance_groups:
     azs: [z1]
     instances: 1
     vm_type: minimal
+    vm_extensions:
+    - 50GB_ephemeral_disk
     stemcell: default
     networks:
     - name: default
