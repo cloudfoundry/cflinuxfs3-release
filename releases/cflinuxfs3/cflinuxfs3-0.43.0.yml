@@ -1,0 +1,23 @@
+name: cflinuxfs3
+version: 0.43.0
+commit_hash: e6f3e9b
+uncommitted_changes: false
+jobs:
+- name: cflinuxfs3-rootfs-setup
+  version: 63cdfdcc24d168431dd54631566d9b464eaf4f95
+  fingerprint: 63cdfdcc24d168431dd54631566d9b464eaf4f95
+  sha1: 5e88a15db15029cabf08be50ec65272513460b22
+- name: cflinuxfs3-smoke-test
+  version: d4469ae07f84bcc0a3629618e08ed9ed26588afd
+  fingerprint: d4469ae07f84bcc0a3629618e08ed9ed26588afd
+  sha1: 277938af7e339120220de899a9d0517a34211673
+packages:
+- name: cflinuxfs3
+  version: 727da27ecf351457447a79a7d15218d7d68f8e2c
+  fingerprint: 727da27ecf351457447a79a7d15218d7d68f8e2c
+  sha1: ed66e156c8b4b174f2aaad456a86dfe82753a1d0
+  dependencies: []
+license:
+  version: 6f4d3d318a6407614a83d1f66fdcd5ee31f24bd6
+  fingerprint: 6f4d3d318a6407614a83d1f66fdcd5ee31f24bd6
+  sha1: b78eb69d6adcdf546626253e37f43720ce1c3193
