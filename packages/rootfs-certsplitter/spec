@@ -1,0 +1,8 @@
+---
+name: rootfs-certsplitter
+
+dependencies:
+  - golang-1.11-linux
+
+files:
+  - code.cloudfoundry.org/certsplitter/cmd/certsplitter/*.go
