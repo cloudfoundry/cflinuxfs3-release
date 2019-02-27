@@ -45,7 +45,8 @@ version v206+ (1.3072.0) and stemcell version 3125+.
 The following command will create and upload the cflinuxfs3 BOSH release
 to the BOSH director.
 
-`bosh -n create release && bosh -n upload release`
+`git submodule update --init`
+`bosh -n create-release && bosh -n upload release`
 
 #### Running smoke tests
 
