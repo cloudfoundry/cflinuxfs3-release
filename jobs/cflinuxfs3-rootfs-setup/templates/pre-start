@@ -47,3 +47,4 @@ fi
 touch $ROOTFS_DIR
 
 tar -C $ROOTFS_DIR -cf $ROOTFS_TAR .
+rm -rf $ROOTFS_DIR
