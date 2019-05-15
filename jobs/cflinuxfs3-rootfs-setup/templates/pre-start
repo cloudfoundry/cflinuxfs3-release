@@ -15,7 +15,7 @@ fi
 
 if grep -q "trusted_ca_certificates" $TRUSTED_CERT_FILE; then
   JSON_CERT_FILE=$CONF_DIR/certs/trusted_ca.json
-  mv $TRUSTED_CERT_FILE $JSON_CERT_FILE
+  cp $TRUSTED_CERT_FILE $JSON_CERT_FILE
   TRUSTED_CERT_FILE=$JSON_CERT_FILE
 fi
 
