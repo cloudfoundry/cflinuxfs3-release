@@ -2,16 +2,26 @@
 
 set -ex
 
-CERTS_DIR=/var/vcap/packages/cflinuxfs3/rootfs/usr/local/share/ca-certificates/
-CERTS=/var/vcap/jobs/cflinuxfs3-smoke-test/config/certs/trusted_ca.crt
-CERTS_COUNT=`grep "END CERTIFICATE" $CERTS | wc -l`
-FILE_COUNT=`find $CERTS_DIR -type f | wc -l`
-[ $FILE_COUNT -eq $CERTS_COUNT ]
+CERTS_PROPERTY=$(cat /var/vcap/jobs/cflinuxfs3-smoke-test/config/certs/trusted_ca.crt)
+CERTS_PROPERTY_COUNT=$(echo $CERTS_PROPERTY | grep "BEGIN CERTIFICATE" | wc -l)
 
 ROOTFS_TAR=/var/vcap/packages/cflinuxfs3/rootfs.tar
-ROOTFS=/var/vcap/packages/cflinuxfs3/rootfs
 ROOTFS_TMP=/tmp/rootfs
-mkdir -p $ROOTFS_TMP
-tar -C $ROOTFS_TMP -xf $ROOTFS_TAR .
-# diff doesn't compare devices correctly, so ignore /dev
-diff -r --no-dereference -x 'dev' $ROOTFS $ROOTFS_TMP
+mkdir -p "$ROOTFS_TMP"
+tar -C "$ROOTFS_TMP" -xf "$ROOTFS_TAR" .
+
+ROOTFS_CERTS_DIR="$ROOTFS_TMP/usr/local/share/ca-certificates/"
+SETUP_CERTS_COUNT=`find "$ROOTFS_CERTS_DIR" -type f | wc -l`
+
+if [[ "$CERTS_PROPERTY_COUNT" -ne "$SETUP_CERTS_COUNT" ]]; then
+  echo "certs in tar do not match spec property"
+  exit 1
+fi
+
+set +e
+stat -c "%a" "$ROOTFS_TMP"/usr/local/share/ca-certificates/* | grep -v 644
+if [[ "$?" == 0 ]]; then
+  echo "bad cert permissions"
+  exit 1
+fi
+set -e

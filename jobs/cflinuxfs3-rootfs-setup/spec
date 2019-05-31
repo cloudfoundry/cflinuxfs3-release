@@ -9,6 +9,12 @@ packages:
   - cflinuxfs3
   - rootfs-certsplitter
 
+provides:
+- name: cflinuxfs3
+  type: certificate
+  properties:
+  - cflinuxfs3-rootfs.trusted_certs
+
 properties:
   cflinuxfs3-rootfs.trusted_certs:
     description: "Concatenation of PEM-encoded CA certficates to add to the rootfs trust store."
