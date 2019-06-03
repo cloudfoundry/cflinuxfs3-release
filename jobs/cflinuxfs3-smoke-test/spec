@@ -5,7 +5,13 @@ templates:
   run.erb: bin/run
   trusted_ca.crt.erb: config/certs/trusted_ca.crt
 
-consumes:
-- name: cflinuxfs3
-  type: certificate
-
+properties:
+  cflinuxfs3-rootfs.trusted_certs:
+    description: "Concatenation of PEM-encoded CA certficates to add to the rootfs trust store."
+    example: |
+      -----BEGIN CERTIFICATE-----
+      (contents of certificate #1)
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      (contents of certificate #2)
+      -----END CERTIFICATE-----
