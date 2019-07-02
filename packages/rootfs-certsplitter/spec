@@ -1,5 +1,5 @@
 ---
-name: rootfs-certsplitter
+name: rootfs-certsplitter-cflinuxfs3
 
 dependencies:
   - golang-1.11-linux

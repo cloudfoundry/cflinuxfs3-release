@@ -7,7 +7,7 @@ templates:
 
 packages:
   - cflinuxfs3
-  - rootfs-certsplitter
+  - rootfs-certsplitter-cflinuxfs3
 
 properties:
   cflinuxfs3-rootfs.trusted_certs:
