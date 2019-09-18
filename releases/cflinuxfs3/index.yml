@@ -163,6 +163,8 @@ builds:
     version: 0.4.0
   aea61151-41c2-4820-6630-bf1a402853de:
     version: 0.89.0
+  aef8ecd4-08d7-4bc2-7de1-b1c8ce278a33:
+    version: 0.128.0
   aeff594f-2811-4609-5b4c-b105f84d6573:
     version: 0.22.0
   b2108e18-e8cf-40c9-4473-05bcd655ef46:
