@@ -19,3 +19,7 @@ properties:
       -----BEGIN CERTIFICATE-----
       (contents of certificate #2)
       -----END CERTIFICATE-----
+
+  cflinuxfs3-rootfs.destination:
+    description: "Destination path for the rootfs, tarball and unpacked."
+    default: "/var/vcap/packages/cflinuxfs3"
