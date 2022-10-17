@@ -1,12 +1,12 @@
 #!/bin/bash -eu
 
-source /var/vcap/packages/golang-1.11-linux/bosh/compile.env
+source /var/vcap/packages/golang-1.19-linux/bosh/compile.env
 
 mkdir -p ${BOSH_INSTALL_TARGET}/src
 cp -a . ${BOSH_INSTALL_TARGET}/src
 export GOPATH=$BOSH_INSTALL_TARGET
 
-export GOROOT=$(readlink -nf /var/vcap/packages/golang-1.11-linux)
+export GOROOT=$(readlink -nf /var/vcap/packages/golang-1.19-linux)
 export PATH=$GOROOT/bin:$PATH
 
 go install code.cloudfoundry.org/certsplitter/cmd/certsplitter
