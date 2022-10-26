@@ -11,11 +11,6 @@ export GOROOT=$(readlink -nf /var/vcap/packages/golang-1.19-linux)
 export PATH=$GOROOT/bin:$PATH
 
 pushd code.cloudfoundry.org/certsplitter
-  "printing go version"
-  go version
-  "printing ls"
-  ls
-
   go install -buildvcs=false code.cloudfoundry.org/certsplitter/cmd/certsplitter
 popd
 
