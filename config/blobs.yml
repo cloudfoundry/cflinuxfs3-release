@@ -1,4 +1,4 @@
-rootfs/cflinuxfs3-0.356.0.tar.gz:
-  size: 353101294
-  object_id: 1dc30b03-e528-4ddb-70f0-5a018e1279f8
-  sha: sha256:503cff673bee7a3ea0f01f06096efaf7bae19e3ff4e6dadce906f256b3d2b0b4
+rootfs/cflinuxfs3-0.357.0.tar.gz:
+  size: 353113454
+  object_id: a8318d1b-384b-41ea-6f4f-16f926a27438
+  sha: sha256:b44425c7b092f257b79237f74b2510a46a45d5e239e85e2ba23a061580796bc3
