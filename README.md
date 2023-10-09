@@ -1,3 +1,11 @@
+# Deprecation Notice
+As of May 2023 support for Ubuntu Bionic has ended, and as a result, no further
+releases of the `cflinuxfs3-release` BOSH release will be published. Instead,
+please use the Ubuntu Jammy-based stack BOSH release available at
+[cloudfoundry/cflinuxfs4-release](https://github.com/cloudfoundry/cflinuxfs4-release),
+which will be kept up-to-date and released in the same fashion as
+`cflinuxfs3-release`.
+
 ### cflinuxfs3 BOSH Release
 
 This bosh release contains the rootfs package as well as a job that will
